@@ -299,10 +299,10 @@ public final class ClassLoaderFactory {
 
 
     public enum RepositoryType {
-        DIR,
-        GLOB,
-        JAR,
-        URL
+        DIR, // 表示整个目录下的资源，包括所有Class、Jar包及其他类型资源
+        GLOB, // 表示整个目录下所有的Jar包资源，仅仅是.jar后缀的资源
+        JAR, // 表示单个Jar包资源
+        URL // 表示从URL上获取的Jar包资源
     }
 
     public static class Repository {
